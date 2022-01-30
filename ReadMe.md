@@ -8,7 +8,11 @@
 
 ### **Web Preview:**
 
-![Restful Refactor: Google Books-Preview](assets/RestfulRefactorPre.png)
+![Restful Refactor: Google Books-PreviewA.](assets/RestfulRefactorPre.png)
+
+<br>
+
+![Restful Refactor: Google Books-PreviewB.](assets/RestfulRefactorPreB.png)
 
 ### **Links:**
 
