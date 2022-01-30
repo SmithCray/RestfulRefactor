@@ -2,6 +2,14 @@
 
 ### **Description:**
 
+Google Books is a fully functioning [API](https://en.wikipedia.org/wiki/API) search engine built with a RESTful API using the [MERN stack](https://www.mongodb.com/mern-stack) and a [React](https://reactjs.org/) front end, [MongoDB](https://www.mongodb.com/) database, and [Node.js/Express.js](https://expressjs.com/) server and API. Which allows users to save book searches to the back end, sign-in and out, and query Books data all while being presenting with a high-quality responsive and enjoyable user experience via our friend _**"React"**_.
+
+<br>
+
+### **Our Mission:**
+
+dfsfg
+
 <br>
 
 #
