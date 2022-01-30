@@ -16,11 +16,11 @@ dfsfg
 
 ### **Web Preview:**
 
-![Restful Refactor: Google Books-PreviewA.](assets/RestfulRefactorPre.png)
+![Restful Refactor: Google Books-PreviewA.](./client/src/assets/RestfulRefactorPre.png)
 
 <br>
 
-![Restful Refactor: Google Books-PreviewB.](assets/RestfulRefactorPreB.png)
+![Restful Refactor: Google Books-PreviewB.](./client/src/assets/RestfulRefactorPreB.png)
 
 ### **Links:**
 
@@ -42,7 +42,7 @@ https://github.com/SmithCray/RestfulRefactor
 
 ### <span style="color:orange">**Cray Smith**</span>
 
-<img src="assets\p2cray.png" alt="Cray Smith GitHub" width="150px">
+<img src="./client/src/assets\p2cray.png" alt="Cray Smith GitHub" width="150px">
 
 GitHub Link:
 <br>
