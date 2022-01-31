@@ -12,6 +12,10 @@ We are working to refactor Gooogle Books API and incorperate new performant tech
 
 <br>
 
+**Initial Issues and Diclaimer:**
+
+We are currrently experiencing a bug within our starting structure that is causing issues with the deployed product. We are working to fix this issue and have not been able to determine the a solution yet. We are working around the clock to de-bug and determine the root of the issue.
+
 **Deployment:**
 
 <br>
