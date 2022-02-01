@@ -36,7 +36,7 @@ Heroku deployment fixed, issue was cause by initial build pack that was intended
 
 <br>
 
-**Development Server Start:**
+**Development/Working environment:**
 
         npm run develop
 
