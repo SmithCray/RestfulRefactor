@@ -38,21 +38,23 @@ Heroku deployment fixed, issue was cause by initial build pack that was intended
 
 **Development Server Start:**
 
-<br>
-
         npm run develop
 
 <br>
 
-#
-
 ### **Web Preview:**
 
-![Restful Refactor: Google Books-PreviewA.](./client/src/assets/RestfulRefactorPre.png)
+![Restful Refactor: Google Books-PreviewB.](./client/src/assets/RestfulRefactorPreB.png)
 
 <br>
 
-![Restful Refactor: Google Books-PreviewB.](./client/src/assets/RestfulRefactorPreB.png)
+![Restful Refactor: Google Books-PreviewA.](./client/src/assets/googlebooksSaved.png)
+
+<br>
+
+### **Mongo Atlas:**
+
+![Restful Refactor: Google Books-PreviewB.](./client/src/assets/googlebooksAtlas.png)
 
 <br>
 
