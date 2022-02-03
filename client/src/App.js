@@ -19,7 +19,7 @@ const client = new ApolloClient({
       },
     });
   },
-  uri: "/graphgl",
+  uri: "/graphql",
 });
 
 function App() {
