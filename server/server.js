@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const db = require("./config/connection");
+
 // Will remove routes?
 const routes = require("./routes");
 const { ApolloServer } = require("apollo-server-express");
@@ -24,9 +25,9 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/build")));
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
+// }
 
 app.use(routes);
 
