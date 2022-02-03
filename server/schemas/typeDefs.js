@@ -6,7 +6,6 @@ const { gql } = require("apollo-server-express");
 // datatypes - scalar types
 
 const typeDefs = gql`
-
   type Book {
     bookId: String
     authors: [String]
@@ -20,14 +19,14 @@ const typeDefs = gql`
     username: String
     email: String
     bookCount: Int
-    svaedBooks: [Book]
+    savedBooks: [Book]
   }
   type Auth {
     token: ID!
-    user:user
+    user: User
   }
   input bookInput {
-    boodId:String
+    boodId: String
     authors: [String]
     description: String
     title: String
@@ -35,14 +34,18 @@ const typeDefs = gql`
     link: String
   }
   type query {
-    me:user
+    me: User
   }
   type Mutation {
-    login(email: String!, password: String!); Auth
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     saveBook(input: bookInput): User
     removeBook(bookId: String!): User
   }
 `;
+
+//  await Book.findOneAndDelete({ savedBooks, bookId: context.user.bookId });
+//   return { success: true, message: "got'em" };
 
 module.exports = typeDefs;
 

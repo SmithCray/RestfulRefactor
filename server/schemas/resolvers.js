@@ -1,6 +1,6 @@
-const { deleteBook } = require("../controllers/user-controller");
+// const { deleteBook } = require("../controllers/user-controller");
 const { User } = require("../models");
-const { AuthenticationError } = require("../utils/auth");
+const { AuthenticationError } = require("apollo-server-express");
 
 const { signToken } = require("../utils/auth");
 
@@ -20,15 +20,17 @@ const resolvers = {
     addUser: async (parent, args) => {
       // Create and return the new School object
       const user = await User.create(args);
-      const Token = signToken(user);
+      const token = signToken(user);
 
       return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const user = await User.findone({ email });
+      const user = await User.findOne({ email });
+
       if (!user) {
         throw new AuthenticationError("Wrong username or password");
       }
+
       const correctPw = await user.isCorrectPassword(pasword);
 
       if (!correctPw) {
@@ -51,18 +53,20 @@ const resolvers = {
     },
     removeBook: async (parent, { bookId }, { user }) => {
       if (user) {
-        const updateUser = await User.findOneAndUpdate(
+        const updatedUser = await User.findOneAndUpdate(
           { _id: user._id },
           { $pull: { savedBooks: { bookId: bookId } } },
           { new: true, runValidators: true }
         );
+        return updatedUser;
       }
-      throw new AuthenticationError();
+      throw new AuthenticationError("Please log-in!");
     },
   },
-  //  await Book.findOneAndDelete({ savedBooks, bookId: context.user.bookId });
-  //   return { success: true, message: "got'em" };
 };
+
+//  await Book.findOneAndDelete({ savedBooks, bookId: context.user.bookId });
+//   return { success: true, message: "got'em" };
 
 // router.route("/").post(createUser).put(authMiddleware, saveBook);
 
