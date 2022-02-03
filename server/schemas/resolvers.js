@@ -45,11 +45,23 @@ const resolvers = {
           { $addToSet: { savedBooks: input } },
           { new: true, runValidators: true }
         );
+        return updatedUser;
       }
-      await Book.findOneAndDelete({ savedBooks, bookId: context.user.bookId });
-      return { success: true, message: "got'em" };
+      throw new AuthenticationError("Please login or make an account!");
+    },
+    removeBook: async (parent, { bookId }, { user }) => {
+      if (user) {
+        const updateUser = await User.findOneAndUpdate(
+          { _id: user._id },
+          { $pull: { savedBooks: { bookId: bookId } } },
+          { new: true, runValidators: true }
+        );
+      }
+      throw new AuthenticationError();
     },
   },
+  //  await Book.findOneAndDelete({ savedBooks, bookId: context.user.bookId });
+  //   return { success: true, message: "got'em" };
 };
 
 // router.route("/").post(createUser).put(authMiddleware, saveBook);
