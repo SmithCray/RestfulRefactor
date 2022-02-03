@@ -25,9 +25,9 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// if (process === "production") {
-//   app.use(express.static(path.join(__dirname, "../client/build")));
-// }
+if (process === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
 
 app.use(routes);
 
