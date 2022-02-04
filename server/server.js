@@ -11,6 +11,7 @@ const { typeDefs, resolvers } = require("./schemas");
 const { authMiddleware } = require("./utils/auth");
 const app = express();
 
+// Finally this worked!!!
 const PORT = process.env.PORT || 3001;
 
 // Apollo server
@@ -38,6 +39,7 @@ app.get("*", (req, res) => {
 db.once("open", () => {
   app.listen(PORT, () => {
     console.log(`🌍 Now listening on localhost:${PORT}`);
+    // Finally working too!!
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
