@@ -22,7 +22,7 @@ While we are still working to resolve issues and moving forward solving errors o
 
                 2022-02-04T07:16:15.935108+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/"
 
-After recent success we are happy to move on to the next issue at hand which appears to be a login issue after post, we plan to continue to work on the product's functionality behind the scenes and re-establish its original operations.
+After recent success we are happy to move on to the next issue at hand which appears to be a login-related(maybe: user?) issue after post, we plan to continue to work on the product's functionality behind the scenes and re-establish its original operations.
 
 <br>
 
