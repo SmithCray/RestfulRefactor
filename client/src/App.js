@@ -10,7 +10,7 @@ import SavedBooks from "./pages/SavedBooks";
 import Navbar from "./components/Navbar";
 
 const client = new ApolloClient({
-  Request: (operation) => {
+  request: (operation) => {
     const token = localStorage.getItem("id_token");
 
     operation.setContext({
