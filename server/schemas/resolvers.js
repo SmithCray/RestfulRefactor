@@ -11,7 +11,8 @@ const resolvers = {
         const UserData = await User.findOne({ _id: context.user._id }).select(
           "-__v -password"
         );
-        return UserData;
+
+        return userData;
       }
       throw new AuthenticationError("Please log in first!");
     },
