@@ -14,13 +14,25 @@ We are working to refactor Gooogle Books API and incorperate new performant tech
 
 <span style="color:orange">**Initial Issues and Diclaimer:**</span>
 
-We are currrently experiencing a bug within our starting structure that is causing issues with the deployed product. We are working to fix this issue and have not been able to determine the a solution yet. We are working around the clock to de-bug and determine the root of the issue.
+We are currrently experiencing a bug within our starting structure that is causing issues with the deployed product. We are working to fix this issue and have not been able to determine the a solution and are working around the clock to de-bug and determine the root of the issue.
+
+In addition to the initial struggles with Heroku during deployment we struggled with alot of error and trouble shooting while learning how to use _graphQl_ and _mongodb_ as well as working with [apollo/react-hooks](https://www.apollographql.com/docs/react/api/react/hooks/).
+
+While we are still working to resolve issues and moving forward solving errors one at a time, this line of code from **"heroku logs --tail"** has been a recurring issue.
+
+                2022-02-04T07:16:15.935108+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/"
+
+After recent success we are happy to move on to the next issue at hand which appears to be a login issue after post, we plan to continue to work on the product's functionality behind the scenes and re-establish its original operations.
 
 <br>
 
-<span style="color:green">**Update:**</span>
+<span style="color:green">**Updates:**</span>
 
 Heroku deployment fixed, issue was cause by initial build pack that was intended for a static single page application. By removing current status buildpack and running a react/heroku default build as well as backend mongo atlas verification fixed.
+
+In addition to Heroku's original success with the help of the a few tutors and TA's we were able to start building out our [mutations and typeDefs](https://graphql.org/learn/queries/) as well as connect to our mongoDb Atlas creating a google books collection containing users. While we are working on addition features the api functionality is working properly now as well.
+
+Overall the ability to use _graphQl_ and _heroku logs_ working together helped alot to solve issues within my _mutations_ and _typedefs_. in addition alot of initial problems were created during the building of the code in terms of spelling or case errors. _"Never code when you are tired"._
 
 <br>
 
