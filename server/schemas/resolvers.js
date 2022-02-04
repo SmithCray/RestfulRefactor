@@ -8,7 +8,7 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => {
       if (context.user) {
-        const UserData = await User.findOne({ _id: context.user._id }).select(
+        const userData = await User.findOne({ _id: context.user._id }).select(
           "-__v -password"
         );
 
@@ -32,7 +32,7 @@ const resolvers = {
         throw new AuthenticationError("Wrong username or password");
       }
 
-      const correctPw = await user.isCorrectPassword(pasword);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw new AuthenticationError("Wrong username or password");
